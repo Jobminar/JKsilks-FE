@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer/footer";
-import Navbar from "./components/Navbar/Navbar";
+// import Footer from "./components/Footer/footer";
+// import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Login from "./components/Profile/Login";
 import Signup from "./components/Profile/Signup";
@@ -15,11 +15,14 @@ import Purekanchipattu from "./components/Sares/purekanchipattu/purekanchipattu"
 import Bridalware from "./components/Sares/Bridalware/bridalware";
 import Purekanjivaram from "./components/Sares/Purekanjivaram/purekanjivaram";
 import Adminheader from "./components/Admin/adminheader";
+import Admincustomer from "./components/Admin/Admin-customer/admin-customer";
+import Adminproduct from "./components/Admin/Admin-product/adminproduct";
+import Adminfeedback from "./components/Admin/Admin-feedback/adminfeedback";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -37,9 +40,12 @@ function App() {
 
           {/* Admin */}
           <Route path="/adminheader" element={<Adminheader/>}/>
+          <Route path="/admincustomer" element={<Admincustomer/>}/>
+          <Route path="/adminproduct" element={<Adminproduct/>}/>
+          <Route path="/adminfeedback" element={<Adminfeedback/>}/>
     
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );
