@@ -8,7 +8,13 @@ import ShoppingCart from "./components/Cart/ShoppingCart";
 import Account from "./components/Profile/Account";
 import Favourites from "./components/Favourites/Favourites";
 import AddTocart from "./components/Cart/AddTocart";
-
+import Semikanchipattu from "./components/Sares/semikanchipattu/semikanchipattu";
+import Lightweightpattu from './components/Sares/lightweightpattu/lightweightpattu'
+import Softsilk from "./components/Sares/softsilk/softsilk";
+import Purekanchipattu from "./components/Sares/purekanchipattu/purekanchipattu";
+import Bridalware from "./components/Sares/Bridalware/bridalware";
+import Purekanjivaram from "./components/Sares/Purekanjivaram/purekanjivaram";
+import Adminheader from "./components/Admin/adminheader";
 function App() {
   return (
     <>
@@ -22,6 +28,16 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/favourite" element={<Favourites />} />
           <Route path="/addtocart" element={<AddTocart />} />
+          <Route path="/semikanchipattu" element={<Semikanchipattu/>}/>
+          <Route path="/lightweightpattu" element={<Lightweightpattu/>} />
+          <Route path="/softsilk" element={<Softsilk />} />
+          <Route path="/purekanchhipattu" element={<Purekanchipattu />} />
+          <Route path="/bridalware" element={<Bridalware />} />
+          <Route path="/purekanjivaram" element={<Purekanjivaram />} />
+
+          {/* Admin */}
+          <Route path="/adminheader" element={<Adminheader/>}/>
+    
         </Routes>
         <Footer />
       </BrowserRouter>

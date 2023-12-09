@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "./images/logo.png";
@@ -8,6 +9,7 @@ import wishlist from "./images/wishlist.png";
 import profile from "./images/profile.png";
 
 const Navbar = () => {
+
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
@@ -32,12 +34,12 @@ const Navbar = () => {
   return (
     <div className="navbar-con">
       <img src={logo} alt="logo" onClick={handleHomeClick} />
-      <p>Semi Kanchi pattu</p>
-      <p>Light weight pattu</p>
-      <p>Soft Silk</p>
-      <p>Pure Kanchi Pattu</p>
-      <p>Exclusive Bridal wear</p>
-      <p>Pure Kanjivaram Silk</p>
+      <p onClick={()=>{navigate('/semikanchipattu')}}>Semi Kanchi pattu</p>
+      <p onClick={()=>{navigate('/lightweightpattu')}}>Light weight pattu</p>
+      <p onClick={()=>{navigate('/softsilk')}}>Soft Silk</p>
+      <p onClick={()=>{navigate('/purekanchhipattu')}}>Pure Kanchi Pattu</p>
+      <p onClick={()=>{navigate('/bridalware')}}>Exclusive Bridal wear</p>
+      <p onClick={()=>{navigate('/purekanjivaram')}}>Pure Kanjivaram Silk</p>
       <img src={search} alt="search" onClick={handleSearchClick} />
       <img src={wishlist} alt="wishlist" onClick={handleWishlistClick} />
       <img src={cart} alt="cart" onClick={handleCartClick} />
